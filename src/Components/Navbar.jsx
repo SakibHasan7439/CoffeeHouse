@@ -29,15 +29,12 @@ const Navbar = () => {
                 </div>
                 <a className="btn btn-ghost text-xl">Cook Book</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal text-xl font-semibold gap-5 px-1">
                     <NavLink to={'/'}>Home</NavLink>
                     <NavLink to={'/coffees'}>Coffees</NavLink>
                     <NavLink to={'/dashboard'}>DashBoard</NavLink>
                 </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
             </div>
         </div>
     );
