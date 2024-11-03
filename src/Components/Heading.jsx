@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const Heading = ({title, subtitle}) => {
     return (
         <div className="flex flex-col w-full justify-center items-center my-12">
@@ -9,4 +10,8 @@ const Heading = ({title, subtitle}) => {
     );
 };
 
+Heading.propTypes = {
+    title: PropTypes.string,
+    subtitle:PropTypes.string
+}
 export default Heading;

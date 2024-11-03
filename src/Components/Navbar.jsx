@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar backdrop-blur-xl z-50 bg-white/30 fixed">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,18 +22,23 @@ const Navbar = () => {
                 <ul
                     tabIndex={0}
                     className="menu menu-sm text-lg dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <NavLink to={'/'}>Home</NavLink>
-                    <NavLink to={'/coffees'}>Coffees</NavLink>
-                    <NavLink to={'/dashboard'}>DashBoard</NavLink>
+                    <NavLink className={({isActive})=> `font-semibold text-xl ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`} to={'/'}>Home</NavLink>
+                    <NavLink className={({isActive})=> `font-semibold text-xl ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`} to={'/coffees'}>Coffees</NavLink>
+
+                    <NavLink className={({isActive})=> `font-semibold text-xl ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`} to={'/dashboard'}>DashBoard</NavLink>
+
                 </ul>
+                
                 </div>
                 <a className="btn btn-ghost text-xl">Cook Book</a>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal text-xl font-semibold gap-5 px-1">
-                    <NavLink to={'/'}>Home</NavLink>
-                    <NavLink to={'/coffees'}>Coffees</NavLink>
-                    <NavLink to={'/dashboard'}>DashBoard</NavLink>
+                    <NavLink className={({isActive})=> `font-semibold text-xl ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`} to={'/'}>Home</NavLink>
+
+                    <NavLink className={({isActive})=> `font-semibold text-xl ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`} to={'/coffees'}>Coffees</NavLink>
+
+                    <NavLink className={({isActive})=> `font-semibold text-xl ${isActive ? "text-yellow-500" : "hover:text-yellow-500"}`} to={'/dashboard'}>DashBoard</NavLink>
                 </ul>
             </div>
         </div>
